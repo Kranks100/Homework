@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1 transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chapter 10 - Statewide  Realty</title>
+<script type="text/javascript">
+<!--hide from old browsers
+  var scrollMsg = " ** Take advantage of the current low interest rates! ** "
+  var beginPos = 0
+  function scrollingMsg() {
+    document.msgForm.scrollingMsg.value = scrollMsg.substring(beginPos,scrollMsg.length)+scrollMsg.substring(0,beginPos)
+  beginPos = beginPos + 1
+  if (beginPos > scrollMsg.length) {
+    beginPos = 0
+  }
+  window.setTimeout("scrollingMsg()", 200)
+}
+
+function Calc(myform) {
+  var mortAmount=document.MortCalc.Amount.value
+  var mortAmount=parseInt(mortAmount,10)
+    if (isNaN(mortAmount) || (mortAmount<=0)) {
+      alert("The loan amount is not a valid number!")
+      document.MortCalc.Amount.value=" "
+      document.MortCalc.Amount.focus()
+    }
+    else{
+      var mortRate=document.MortCalc.Rate.value
+      var mortRate=parseFloat(mortRate)
+      if (isNaN(mortRate) || (mortRate<=0)) {
+        alert("The intrest rate is not a valid number!")
+        document.MortCalc.Rate.value=" "
+        document.MortCalc.Rate.focus()
+      }
+      else {
+        var mortYears=document.MortCalc.Years.value
+        var mortYears=parseInt(mortYears,10)
+        if (isNaN(mortYears) || (mortYears<=0)) {
+          alert("The number of years is not a valid number!")
+          document.MortCalc.Years.value=" "
+          document.MortCalc.Years.focus()
+        }
+        else {
+          var mortPayment=monthly(mortAmount,mortRate,mortYears)
+          document.MortCalc.Payment.value=dollarFormat(mortPayment.toString())
+        }
+      }
+    }
+}
+function monthly(mortAmount,mortRate,mortYears) {
+  var Irate=mortRate/1200
+  var Pmts=mortYears*12
+  var Amnt=mortAmount * (Irate / (1-(1/ Math.pow(1+Irate,Pmts))))
+  return Amnt.toFixed(2)
+}
+function dollarFormat(valuein) {
+  var formatStr=""
+  var Outdollars=""
+  var decipos=valuein.indexOf(".")
+  if (decipos ==-1)
+    decipos=valuein.length
+var dollars=valuein.substring(0,decipos)
+var dollen=dollars.length
+if (dollen>3) {
+  while (dollen>0) {
+    tDollars=dollars.substring(dollen-3,dollen)
+    if (tDollars.length==3) {
+      Outdollars=","+tDollars+Outdollars
+      dollen=dollen-3
+    } else {
+      Outdollars=tDollars+Outdollars
+      dollen=0
+    }
+  }
+  if (Outdollars.substring(0,1)==",")
+    dollars=Outdollars.substring(1,Outdollars.length)
+  else
+    dollars=Outdollars
+}
+var cents=valuein.substring(decipos+1,decipos+3)
+var formatStr="$"+dollars+"."+cents
+return formatStr
+}
+
+function popupAd() {
+  open("chapter10notice.html","noticeWin","width=550,height=360")
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: x-large;
+	font-weight: bold;
+	color: #3399FE;
+}
+.style2 {color: #3366FF}
+body {
+	background-image: url(chapter10bkgrnd.jpg);
+}
+.style3 {color: #000000; }
+-->
+</style>
+</head>
+<body onload="scrollingMsg(); popupAd()">
+  <table width="75%" border="0" align="center">
+  <tr>
+    <td>
+      <p align="center"><img src="chapter10banner.jpg" alt="banner" /></p>
+    </td>
+    </tr>
+  <tr>
+    <td>
+    <div align="center">
+
+<form name = "msgForm" action = "">
+  <input type="text" name = "scrollingMsg" size = "25"/>
+  </form>
+    </div>
+    </td>
+ </tr>
+</table>
+<p align="center"><img src="divider-blue-3.jpg" alt="divider" /></p>
+<p align="center" class="style1 style2">Estimate Mortgage Payments</p>
+<p align="left" class="style3" style="margin-left:14%; margin-right:11%">Enter the Amount of the Mortgage, press the TAB key, enter the Interest Rate as indicated, press the TAB key again, and then enter the Number of Years for the loan. Click the Calculate button to see your estimated monthly payment.</p>
+<p align="center"><img src="divider-blue-3.jpg" alt="divider" /></p>
+<form name="MortCalc" id="MortCalc" action="">
+  <table width="345" border="0" align="center" cellspacing="5">
+    <tr>
+      <td width="185"><div align="right">Amount of Mortgage:</div></td>
+      <td width="141"><input type="text" name="Amount" value=" " size="9" /></td>
+    </tr>
+    <tr>
+      <td>Interest Rate as % (e.g. 7.9):</td>
+      <td><input type="text" name="Rate" value=" " size="9" /></td>
+    </tr>
+    <tr>
+      <td><div align="right">Number of Years:</div></td>
+      <td><input type="text" name="Years" value=" " size="9" /></td>
+    </tr>
+    <tr>
+      <td><div align="right">
+        <input type="button" value="Calculate" onclick="Calc(MortCalc)" />
+      </div></td>
+      <td><input type="reset" name="reset" id="reset" value="Reset" /></td>
+    </tr>
+    <tr>
+      <td><div align="right">Monthly Payment:</div></td>
+      <td><input type="text" name="Payment" value=" " size="12" /></td>
+    </tr>
+  </table>
+</form>
+<div align="center">
+  <img src="divider-blue-3.jpg" alt="divider" width="700" height="5" />
+</div>
+<script type="text/javascript">
+<!--Hide from old browsers
+  document.write("<p style='margin-left:10%; font-family:Arial, sans-serif;
+  font-size:xx-small; color:#0000ff'>")
+  document.write("Statewide Realty, Copyright 2009-2010. ")
+  document.write("<br />This document was last modified "+document.
+  lastModified.substring(0,10)+"</p>")
+  //-->
+  </script>
+</body>
+</html>
