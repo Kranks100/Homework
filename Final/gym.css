@@ -1,0 +1,140 @@
+@charset "utf-8";
+body {
+  background-color: #15EB84;
+  width:95%;
+}
+h1,h2,p form{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1 {
+  text-align: center;
+  background:linear-gradient(to left, #FFE818,#FF7E20,#F61C1C);
+
+  flood-opacity: 10%;
+}
+header{
+  background:linear-gradient(to left, #FFE818,#FF7E20,#F61C1C);
+}
+.Lo 
+{
+  border-radius: 25%;
+  width:20%;
+}
+body > header > nav.horizontalNavigation li
+{
+  width: 33%;
+}
+nav.horizontalNavigation > ul > li
+{
+display: inline;
+float: left;
+width: 33%;
+}
+li {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor:pointer;
+  text-align:center;
+  border-radius: 25px;
+  background: linear-gradient(to right,#03effe,#026be2);
+  
+
+}
+li:hover 
+{
+background: linear-gradient(to right, #026be2,#ff6347,#03effe);
+}
+p.A
+{
+  border-radius: 50px;
+  border-spacing: 30px;
+  font-size: 20px;
+  float: left;
+  padding: 40px;
+  height: 200px;
+  width: 33%;
+  background-color: #3ED3B5;
+  box-shadow: 10px 10px 5px lightslategray;
+}
+p.B
+{
+  border: 5px solid black;
+  border-spacing: 30px;
+  font-size: 20px;
+  float: right;
+  padding: 15px;
+  text-align:left;
+  background-color:#FF070B;
+  box-shadow: 20px 30px 40px #19FF05;
+  width:40%;
+}
+p.C{
+  border: 5px dotted #4BA316;
+  background-color: #19FF05;
+  font-size: 20px;
+}
+.mid
+{
+
+  margin-left:auto;
+  margin-right:auto;
+  width:40%;
+  display:block;
+  padding:20px;
+}
+.tri-up
+{
+  padding: 25px;
+  width:0px;
+  height:0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top:150px solid #555;
+  display: inline-block;
+  margin-left: auto;
+  margin-right:auto;
+}
+table, th, td 
+{
+  text-align: center;
+  border: 1px solid black;
+}
+table 
+{
+  background-color:darkturquoise;
+  border-radius: 40px;
+  box-shadow: 15px 10px 10px 15px#D61750;
+  width: 65%;
+  border-spacing:30px; 
+  margin-left:auto;
+  margin-right:auto; 
+  border:5px #D61750;
+
+}
+h2{
+  padding-right: 10px;
+  background-color: rgb(18, 180, 180);
+  border: 5px solid darkblue;
+  box-shadow:25px 15px 5px #cde01b;
+}
+.Po {
+  width:35%; 
+  height:300px; 
+  padding: 20px; 
+  clear:left;
+}
+form{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 20%;
+  border: 3px dotted seagreen;
+  padding: 25px;
+  background: linear-gradient(to right,#03effe,#026be2);
+}
+footer{
+  height: 300px;
+  text-align: center;
+}

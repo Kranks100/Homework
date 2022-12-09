@@ -1,0 +1,26 @@
+<div>
+<p class = "A">
+We all welcome you to the website of the gym of the Tryfecta. This is more than a site, this is the next step in your journey to achieve a 
+greater form. We have more to show even though this is so distant. please explore through this screen so we may guide you in the future.
+</p>
+<img src="beachmed.jpg" alt="beach stuff"; style="width: 20; height:250px; float:right; padding: 20px;">
+<br>
+</div>
+<div>
+  <p class = "B">
+    T
+  </p>
+  <img src="gym3.jpg" alt=""; style = "width: 20; height:250px; float: left; padding: 20px;">
+</div>
+
+
+<div style="clear:left">
+  <p class="A">We have wonderful news for those with us and those about to... We have built three more locations for our initiate-level
+    membership. As we create more self-improvement facilities, we strive to keep the same available equipment and below is a list of the equipment 
+    for our new gyms and preexisting gyms.
+  </p>
+</div>
+
+<img src="kettle.jpg" alt="kettlebell"style="width: 20; height:250px; float:right; padding: 20px;">
+https://gfycat.com/indolentfinishedappaloosa
+https://gfycat.com/smugpastafricangroundhornbill
